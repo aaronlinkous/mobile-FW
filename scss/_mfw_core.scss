@@ -1,0 +1,221 @@
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html, body {
+	@extend .smoothing;
+	background-color: $light_color;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	img {
+		border: 0;
+		text-decoration: none;
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+.clear {
+	&:after,&:before {
+		display: table;
+		content: "";
+		line-height: 0;
+		visibility: hidden;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.show {
+	display: block !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.large {
+	font-size: 1.25em;
+}
+
+.small {
+	font-size: .8em;
+}
+
+.primary {
+	@include bg($primary_color);
+
+	&.dbl {
+		@include dbl($primary_color);
+	}
+}
+
+.secondary {
+	@include bg($secondary_color);
+
+	&.dbl {
+		@include dbl($secondary_color);
+	}
+}
+
+.tertiary {
+	@include bg($tertiary_color);
+
+	&.dbl {
+		@include dbl($tertiary_color);
+	}
+}
+
+.error {
+	@include bg($error_color);
+
+	&.dbl {
+		@include dbl($error_color);
+	}
+}
+
+.primary_color {
+	color: $primary_color;
+}
+
+.secondary_color {
+	color: $secondary_color;
+}
+
+.tertiary_color {
+	color: $tertiary_color;
+}
+
+.error_color {
+	color: $error_color;
+}
+
+.not_bold {
+	font-weight: normal;
+}
+
+.align_left {
+	text-align: left;
+}
+
+.align_right {
+	text-align: right;
+}
+
+.align_center {
+	text-align: center;
+}
+
+.right_square {
+	border-radius: $border_radius 0 0 $border_radius;
+}
+
+.left_square {
+	border-radius: 0 $border_radius $border_radius 0;
+}
+
+.pull_right {
+	float: right;
+}
+
+.pull_left {
+	float: left;
+}
+
+.no_float {
+	float: none !important;
+}
+
+ul {
+	margin: 0;
+	padding: 0 0 0 2em;
+
+	&.no_list_style {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	
+		li {
+			padding: .25em 0;
+		}
+	}
+
+	&.zebra {
+		li {
+			&:nth-child(odd) {
+				background-color: $ghosted_color;
+			}
+		}
+	}
+
+	&.border {
+		li {
+			border-bottom: 1px solid $border_color;
+
+			&:last-child {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+
+	&.horizontal {
+		@extend .no_list_style;
+
+		li {
+			float: left;
+			padding: 0;
+		}
+	}
+}
+
+.toggle_header {
+	height: 2em;
+	padding: 0 $container_margin;
+	line-height: 2em;
+	margin: 0;
+	position: relative;
+
+	&:after {
+		font-family: arial;
+		font-weight: bold;
+		position: absolute;
+		content: "+";
+		right: $container_margin;
+	}
+
+	&.open:after {
+		top: -2px;
+		font-size: 1.15em;
+		content: "-";
+	}
+
+	&.full_width {
+		margin: 0 (-$container_margin);
+	}
+}
+
+.toggle_content {
+	display: none;
+	padding: $container_margin $container_margin 0;
+
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.toggle_header.open + .toggle_content {
+	display: block;
+}

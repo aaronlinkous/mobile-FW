@@ -1,0 +1,57 @@
+body {
+	font-family: $body_font;
+	font-size: $font_size;
+	line-height: 1.5em;
+}
+
+.smoothing {
+	text-rendering: optimizeLegibility;
+	-webkit-font-feature-settings: 'liga', 'dlig';
+	-moz-font-feature-settings: 'liga', 'dlig';
+	font-feature-settings: 'liga', 'dlig';
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, li, p {
+	@extend .smoothing;
+	font-family: $heading_font;
+	font-weight: 300;
+	color: $dark_color;
+}
+
+h1, h2 {
+	color: $primary_color;
+	font-size: 1.5em;
+	font-weight: 300;
+	line-height: 1.5em;
+}
+
+h2 {
+	color: $dark_color;
+	font-size: 1.25em;
+}
+
+h3 {
+	font-family: $heading_font_alt;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1em;
+}
+
+h4, h5, h6 {
+	font-size: 1em;
+}
+
+li {
+	font-family: $body_font;
+}
+
+p {
+	font-family: $body_font;
+	font-size: 1em;
+	margin: 0 0 1.5em 0;
+
+	&:last-child {
+		margin: 0;
+	}
+}

@@ -1,0 +1,182 @@
+fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+input {
+	&[type="text"], &[type="email"], &[type="tel"], &[type="search"], &[type="password"] {
+		-webkit-appearance: caret;
+	}
+	
+	&[type='number']{
+		&::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+		}
+	}
+
+	&[type='radio'], &[type='checkbox'] {
+		height: auto;
+		margin-right: 5px;
+
+		&.custom {
+			display: none;
+		
+			+ span {
+				border-radius: $border_radius;
+				position: relative;
+				top: 2px;
+				display: inline-block;
+				height: $input_height/2;
+				width: $input_height/2;
+				background-color: $primary_color;
+			}
+		
+			&:checked {
+				+ span {
+					background-color: $secondary_color;
+				}
+			}
+		}
+	}
+}
+
+input:not([type="button"]), textarea, select {
+	width: 100%;
+	background-color: #f7f7f7;
+	margin: 0;
+	font-size: $form_font_size;
+	border: 1px solid $border_color;
+	box-shadow: none;
+	border-radius: $border_radius;
+	line-height: 20px;
+	padding: 5px 5px 4px;
+	height: $input_height;
+	outline: none;
+	color: $form_color;
+
+	&::-webkit-input-placeholder, &::placeholder {
+		color: $border_color;
+		font-size: .9em;
+	}
+
+	&:focus {
+		border-color: $dark_color;
+	}
+}
+
+select {
+	-webkit-appearance: none;
+	color: $border_color;
+	font-size: .9em;
+	padding-left: 5px !important;
+
+	&.has_value {
+		color: $form_color;
+		font-size: $form_font_size;
+	}
+}
+
+.append {
+	position: relative;
+	height: $input_height;
+
+	> * {
+		position: absolute;
+		float: none;
+	}
+
+	> *:first-child {
+		@extend .right_square;
+		width: auto;
+		left: 0;
+		right: $input_height - 1;
+		z-index: 1;
+	}
+
+	> *:not(:first-child) {
+		@extend .left_square;
+		right: 0;
+		z-index: 2;
+		width: $input_height;
+		height: $input_height;
+	}
+}
+
+.prepend {
+	position: relative;
+	height: $input_height;
+
+	> * {
+		position: absolute;
+		float: none;
+	}
+
+	> *:last-child {
+		width: auto;
+		@extend .left_square;
+		right: 0;
+		left: $input_height - 1;
+		z-index: 1;
+	}
+
+	> *:not(:last-child) {
+		@extend .right_square;
+		left: 0;
+		z-index: 2;
+		width: $input_height;
+		height: $input_height;
+	}
+}
+
+.fake_button {
+	text-decoration: none;
+	text-align: center;
+}
+
+button, input[type="button"], .fake_button {
+	display: inline-block;
+	font-size: 1em;
+	display: block;
+	-webkit-appearance: none;
+	border-radius: $border_radius;
+	padding: .5em 1.5em;
+	margin: 0;
+	border: none;
+
+	&.large {
+		width: 100%;
+		margin: 0;
+	}
+}
+
+label {
+	font-size: $form_font_size;
+	display: block;
+}
+
+.msg {
+	display: none;
+	margin: 0 $container_margin;
+	@extend .half_margin;
+}
+.has_errors {
+	@extend .quarter_margin;
+	.icon-error {
+		display: block;
+	}
+
+	input[type="text"].error_field {
+		color: $error_color;
+		font-weight: bold;
+		border-color: $error_color;
+
+		&::-webkit-input-placeholder, &::placeholder {
+			color: $error_color;
+		}
+	}
+
+	+ .error_message {
+		display: block;
+	}
+}

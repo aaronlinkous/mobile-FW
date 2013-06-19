@@ -1,0 +1,25 @@
+$light_color: #fff;
+$dark_color: #5f5553;
+$form_color: #333;
+
+$body_font: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+$heading_font: "Papyrus", "Georgia", sans-serif;
+$heading_font_alt: "Myriad Pro", Tahoma, Verdana, Arial, sans-serif;
+
+$font_size: 15px;
+$form_font_size: 14px;
+
+$primary_color: #981af1;
+$secondary_color: #1dafc4;
+$tertiary_color: #43b54f;
+$ghosted_color: #c9c9c6;
+$error_color: #ef092a;
+
+$border_radius: 5px;
+$border_color: #999891;
+
+/* GRID MATH */
+
+$container_margin: $font_size * .666;
+$input_height: $font_size * 2.5;
+$row_margin: $font_size * 1.5;
