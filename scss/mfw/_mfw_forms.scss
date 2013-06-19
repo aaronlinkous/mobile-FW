@@ -159,9 +159,20 @@ label {
 	display: none;
 	margin: 0 $container_margin;
 	@extend .half_margin;
+
+	.error_msg, .info_msg {
+		display: none;
+	}
+
+	.error_msg {
+		color: $error_color;
+	}
+
+	.info_msg {
+		color: $secondary_color;
+	}
 }
 .has_errors {
-	@extend .quarter_margin;
 	.icon-error {
 		display: block;
 	}
@@ -176,7 +187,21 @@ label {
 		}
 	}
 
-	+ .error_message {
+	+ .msg {
 		display: block;
+
+		.error_msg {
+			display: block;
+		}
+	}
+}
+
+.has_info {
+	+ .msg {
+		display: block;
+
+		.info_msg {
+			display: block;
+		}
 	}
 }

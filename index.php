@@ -7,7 +7,7 @@
 		<script src="js/misc.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/normalize/2.0.1/normalize.css" media="screen" />
-		<link rel="stylesheet" type="text/css" href="css/mfw.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="css/css.css" media="screen" />
 	</head>
 	<body>
 
@@ -45,7 +45,7 @@
 				<input type="text" class="" placeholder="Placeholder" />
 			</div>
 
-			<div class="row has_errors">
+			<div class="row">
 				<input type="text" class="error_field" placeholder="Placeholder" />
 			</div>
 
@@ -71,12 +71,17 @@
 				</div>
 			</div>
 
-			<div class="row">
+			<div class="row has_info">
 				<div class="append">
 					<input type="text" class="" placeholder="Placeholder" />
 					<button tabindex="-1" class="primary icon-calendar" ></button>
 					<button tabindex="-1" class="error icon-error"></button>
 				</div>
+			</div>
+
+			<div class="msg">
+				<div class="error_msg">There is an error.</div>
+				<div class="info_msg">Some helpful info.</div>
 			</div>
 
 			<div class="row has_errors">
@@ -87,11 +92,12 @@
 				</div>
 			</div>
 
-			<div class="msg error_message error">
-				There is an error
+			<div class="msg">
+				<div class="error_msg">There is an error.</div>
+				<div class="info_msg">Some helpful info.</div>
 			</div>
 
-			<div class="row split has_errors">
+			<div class="row split">
 				<div>
 					<input type="text" placeholder="Placeholder" />
 				</div>
@@ -104,10 +110,6 @@
 						<option value="1">Placeholder</option>
 					</select>
 				</div>
-			</div>
-
-			<div class="msg error_message error">
-				There is an error
 			</div>
 
 			<div class="row split">
