@@ -18,8 +18,7 @@ $error_color: #ef092a;
 $border_radius: 5px;
 $border_color: #999891;
 
-/* GRID MATH */
-
+/* Vertical Rhythem based on the global font size, not based on element font size */
 $container_margin: $font_size * .666;
 $input_height: $font_size * 2.5;
 $row_margin: $font_size * 1.5;
