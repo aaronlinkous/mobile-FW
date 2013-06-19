@@ -102,6 +102,10 @@ img {
 	color: $error_color;
 }
 
+.not_rounded {
+	border-radius: 0;
+}
+
 .not_bold {
 	font-weight: normal;
 }

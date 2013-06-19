@@ -155,21 +155,13 @@ label {
 	display: block;
 }
 
-.msg {
+.fw_msg {
 	display: none;
 	margin: 0 $container_margin;
 	@extend .half_margin;
 
 	.error_msg, .info_msg {
 		display: none;
-	}
-
-	.error_msg {
-		color: $error_color;
-	}
-
-	.info_msg {
-		color: $secondary_color;
 	}
 }
 .has_errors {
@@ -187,7 +179,7 @@ label {
 		}
 	}
 
-	+ .msg {
+	+ .fw_msg {
 		display: block;
 
 		.error_msg {
@@ -197,7 +189,7 @@ label {
 }
 
 .has_info {
-	+ .msg {
+	+ .fw_msg {
 		display: block;
 
 		.info_msg {

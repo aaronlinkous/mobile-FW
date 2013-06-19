@@ -45,8 +45,13 @@
 				<input type="text" class="" placeholder="Placeholder" />
 			</div>
 
-			<div class="row">
-				<input type="text" class="error_field" placeholder="Placeholder" />
+			<div class="row has_info">
+				<input type="text" class="" placeholder="Placeholder" />
+			</div>
+
+			<div class="fw_msg">
+				<div class="error_msg">There is an error.</div>
+				<div class="info_msg">Some helpful info.</div>
 			</div>
 
 			<div class="row">
@@ -71,17 +76,12 @@
 				</div>
 			</div>
 
-			<div class="row has_info">
+			<div class="row">
 				<div class="append">
 					<input type="text" class="" placeholder="Placeholder" />
 					<button tabindex="-1" class="primary icon-calendar" ></button>
 					<button tabindex="-1" class="error icon-error"></button>
 				</div>
-			</div>
-
-			<div class="msg">
-				<div class="error_msg">There is an error.</div>
-				<div class="info_msg">Some helpful info.</div>
 			</div>
 
 			<div class="row has_errors">
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 
-			<div class="msg">
+			<div class="fw_msg">
 				<div class="error_msg">There is an error.</div>
 				<div class="info_msg">Some helpful info.</div>
 			</div>

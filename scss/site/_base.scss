@@ -1,3 +1,18 @@
 .has_info, .has_errors {
 	@extend .quarter_margin;
 }
+
+.fw_msg {
+	@extend .small;
+
+	.error_msg {
+		padding: 0 $container_margin;
+		background-color: $error_color;
+		color: #fff;
+	}
+
+	.info_msg {
+		padding:  0 $container_margin;
+		color: $secondary_color;
+	}
+}
