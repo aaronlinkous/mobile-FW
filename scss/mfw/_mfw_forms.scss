@@ -157,8 +157,8 @@ label {
 
 .fw_msg {
 	display: none;
-	margin: 0 $container_margin;
-	@extend .half_margin;
+	margin-left: $container_margin;
+	margin-right: $container_margin;
 
 	.error_msg, .info_msg {
 		display: none;

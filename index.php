@@ -49,7 +49,7 @@
 				<input type="text" class="" placeholder="Placeholder" />
 			</div>
 
-			<div class="fw_msg">
+			<div class="row fw_msg">
 				<div class="error_msg">There is an error.</div>
 				<div class="info_msg">Some helpful info.</div>
 			</div>
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 
-			<div class="fw_msg">
+			<div class="row fw_msg">
 				<div class="error_msg">There is an error.</div>
 				<div class="info_msg">Some helpful info.</div>
 			</div>
