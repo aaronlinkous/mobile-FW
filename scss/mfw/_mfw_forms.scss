@@ -129,6 +129,41 @@ select {
 	}
 }
 
+.append_prepend {
+	position: relative;
+	height: $input_height;
+
+	> * {
+		position: absolute;
+		float: none;
+	}
+
+	> .prepend {
+		@extend .right_square;
+		left: 0;
+		z-index: 2;
+		width: $input_height;
+		height: $input_height;
+	}
+
+	> .append {
+		@extend .left_square;
+		right: 0;
+		z-index: 2;
+		width: $input_height;
+		height: $input_height;
+	}
+
+	> .middle {
+		@extend .not_rounded;
+		width: auto;
+		left: $input_height;
+		right: $input_height;
+		z-index: 1;
+		height: $input_height;
+	}
+}
+
 .fake_button {
 	text-decoration: none;
 	text-align: center;
