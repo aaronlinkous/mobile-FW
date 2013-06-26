@@ -84,13 +84,13 @@
 				</div>
 			</div>
 
-			<div class="row has_errors">
+			<div class="row">
 				<div class="append_prepend">
-					<button tabindex="-1" class="tertiary icon-calendar append" ></button>
-					<button tabindex="-1" class="error icon-error append"></button>
-					<input type="text" class="middle" placeholder="Placeholder" />
 					<button tabindex="-1" class="tertiary icon-calendar prepend" ></button>
 					<button tabindex="-1" class="error icon-error prepend"></button>
+					<input type="text" class="middle" placeholder="Placeholder" />
+					<button tabindex="-1" class="secondary icon-calendar append" ></button>
+					<button tabindex="-1" class="error icon-error append"></button>
 				</div>
 			</div>
 
