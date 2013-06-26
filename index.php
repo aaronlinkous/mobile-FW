@@ -4,7 +4,7 @@
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<script src="http://code.jquery.com/jquery.min.js"></script>
-		<script src="js/misc.js"></script>
+		<script src="js/fw.js"></script>
 
 		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/normalize/2.0.1/normalize.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="css/css.css" media="screen" />
